@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemrograman Web 1 | Pertemuan 5</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: #333;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        text-align: center;
+      }
+
+      .navbar ul,
+      li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        display: inline;
+      }
+
+      .navbar ul li a {
+        display: inline-block;
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      .navbar ul li a.active {
+        background-color: #555;
+      }
+
+      .navbar ul li a:hover {
+        background-color: #555;
+      }
+      .separator {
+        color: white;
+        padding: 0 10px;
+      }
+
+      section {
+        padding: 50px 20px;
+        background-color: #f0f0f0;
+        margin-top: 60px;
+      }
+
+      section h2 {
+        margin-top: 0;
+      }
+
+      /* Mengubah ukuran gambar ikon */
+      section img {
+        width: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="#about">About</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <h2>Home Section</h2>
+    </section>
+
+    <section id="profile">
+      <h2>Profile Section</h2>
+    </section>
+
+    <section id="about">
+      <h2>About Section</h2>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery Section</h2>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Section</h2>
+      <ul>
+        <li>
+          <img src="instagram_icon.png" alt="Instagram Icon" />
+          <a href="https://www.instagram.com/anggiirawan13" target="_blank" rel="noopener noreferrer">Anggi Irawan</a>
+        </li>
+        <li>
+          <img src="email_icon.png" alt="Email Icon" />
+          <a href="mailto:awannawa0202@gmail.com" target="_blank" rel="noopener noreferrer">awannawa0202@gmail.com</a>
+        </li>
+        <li>
+          <img src="linkedin_icon.png" alt="LinkedIn Icon" />
+          <a href="https://www.linkedin.com/in/anggi-irawan" target="_blank" rel="noopener noreferrer">Anggi Irawan</a>
+        </li>
+        <li>
+          <img src="github_icon.png" alt="LinkedIn Icon" />
+          <a href="https://www.github.com/anggiirawan13" target="_blank" rel="noopener noreferrer">Anggi Irawan</a>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      document.querySelectorAll('.navbar a').forEach((link) => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.navbar a').forEach((el) => {
+          el.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+    </script>
+  </body>
+</html>
