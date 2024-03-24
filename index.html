@@ -37,13 +37,12 @@
         padding: 14px 20px;
         text-decoration: none;
       }
-      .navbar ul li a.active {
-        background-color: #555;
-      }
 
+      .navbar ul li a.active,
       .navbar ul li a:hover {
         background-color: #555;
       }
+
       .separator {
         color: white;
         padding: 0 10px;
@@ -53,6 +52,7 @@
         padding: 50px 20px;
         background-color: #f0f0f0;
         margin-top: 60px;
+        text-align: center;
       }
 
       section h2 {
@@ -61,6 +61,147 @@
 
       section img {
         width: 30px;
+      }
+
+      .home-content,
+      .profile-content,
+      .about-content,
+      .gallery-content,
+      .contact-content {
+        padding: 50px 20px;
+      }
+
+      .home-content h2,
+      .profile-content h2,
+      .about-content h2,
+      .gallery-content h2,
+      .contact-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .home-content p,
+      .about-content p,
+      .profile-content p,
+      .about-content h3,
+      .about-content p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .about-content h3 {
+        font-size: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #555;
+      }
+
+      .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .image-container img {
+        width: 200px;
+        height: auto;
+        margin: 10px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .contact-item {
+        margin: 10px;
+        text-align: center;
+      }
+
+      .contact-item img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .contact-item a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-item a:hover {
+        color: #555;
+      }
+
+      @media only screen and (max-width: 600px) {
+        section {
+          padding: 10vw 5vw;
+        }
+
+        section h2 {
+          font-size: 6vw;
+        }
+
+        section p {
+          font-size: 5vw;
+          margin-bottom: 5vw;
+        }
+
+        .btn {
+          padding: 4vw 8vw;
+          font-size: 4vw;
+        }
+
+        .about-content h3 {
+          font-size: 4vw;
+          margin-bottom: 2vw;
+        }
+
+        .about-content p {
+          font-size: 3.5vw;
+          margin-bottom: 4vw;
+        }
+
+        .gallery-content h2 {
+          font-size: 6vw;
+          margin-bottom: 5vw;
+        }
+
+        .image-container img {
+          width: 60vw;
+          max-width: 300px;
+          margin: 5vw;
+        }
+
+        .contact-content h2 {
+          font-size: 6vw;
+          margin-bottom: 5vw;
+        }
+
+        .contact-item img {
+          width: 12vw;
+          max-width: 60px;
+          height: 12vw;
+          max-height: 60px;
+          margin-bottom: 5vw;
+        }
+
+        .contact-item a {
+          font-size: 5vw;
+        }
       }
     </style>
   </head>
@@ -80,61 +221,94 @@
     </nav>
 
     <section id="home">
-      <h2>Home Section</h2>
+      <div class="home-content">
+        <h2>Selamat Datang di Portofolio Saya</h2>
+        <p>
+          Saya seorang mahasiswa Teknik Informatika di Fakultas Ilmu Komputer
+          Universitas Pamulang, semester 5. Saya tertarik pada pengembangan web
+          dan cyber security. Jelajahi karya saya dan mari kita ciptakan sesuatu
+          yang luar biasa bersama!
+        </p>
+        <a href="#contact" class="btn">Lihat Portofolio</a>
+      </div>
     </section>
 
     <section id="profile">
-      <h2>Profile Section</h2>
+      <div class="profile-content">
+        <h2>Profile</h2>
+        <p>
+          Saya seorang mahasiswa Teknik Informatika di Fakultas Ilmu Komputer
+          Universitas Pamulang, semester 5. Saya tertarik pada pengembangan web
+          dan cyber security.
+        </p>
+      </div>
     </section>
 
     <section id="about">
-      <h2>About Section</h2>
+      <div class="about-content">
+        <h2>Tentang Saya</h2>
+        <p>
+          Saya seorang mahasiswa Teknik Informatika di Fakultas Ilmu Komputer
+          Universitas Pamulang, semester 5.
+        </p>
+        <h3>Misi Saya</h3>
+        <p>Lulus tepat waktu dan IPK diatas 3,51.</p>
+      </div>
     </section>
 
     <section id="gallery">
-      <h2>Gallery Section</h2>
+      <div class="gallery-content">
+        <h2>Gallery</h2>
+        <div class="image-container">
+          <img src="gallery.jpg" alt="Image 1" />
+          <img src="gallery.jpg" alt="Image 2" />
+          <img src="gallery.jpg" alt="Image 3" />
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Contact Section</h2>
-      <ul>
-        <li>
-          <img src="instagram_icon.png" alt="Instagram Icon" />
-          <a
-            href="https://www.instagram.com/anggiirawan13"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Anggi Irawan</a
-          >
-        </li>
-        <li>
-          <img src="email_icon.png" alt="Email Icon" />
-          <a
-            href="mailto:awannawa0202@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >awannawa0202@gmail.com</a
-          >
-        </li>
-        <li>
-          <img src="linkedin_icon.png" alt="LinkedIn Icon" />
-          <a
-            href="https://www.linkedin.com/in/anggi-irawan"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Anggi Irawan</a
-          >
-        </li>
-        <li>
-          <img src="github_icon.png" alt="LinkedIn Icon" />
-          <a
-            href="https://www.github.com/anggiirawan13"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Anggi Irawan</a
-          >
-        </li>
-      </ul>
+      <div class="contact-content">
+        <h2>Hubungi Saya</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <a
+              href="https://www.instagram.com/anggiirawan13"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="instagram_icon.png" alt="Instagram Icon" />
+            </a>
+          </div>
+          <div class="contact-item">
+            <a
+              href="mailto:awannawa0202@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="email_icon.png" alt="Email Icon" />
+            </a>
+          </div>
+          <div class="contact-item">
+            <a
+              href="https://www.linkedin.com/in/anggi-irawan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="linkedin_icon.png" alt="LinkedIn Icon" />
+            </a>
+          </div>
+          <div class="contact-item">
+            <a
+              href="https://www.github.com/anggiirawan13"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="github_icon.png" alt="GitHub Icon" />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script>
